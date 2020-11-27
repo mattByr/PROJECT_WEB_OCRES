@@ -22,7 +22,7 @@ export default class WidgetDistribution extends React.Component {
         return (
             <div class='widget'>                
                 
-                <div class='title' >
+                <div class="text font-weight-bold text-primary text-uppercase mb-1" >
                     PRODUCTS DISTRIBUTION
                 </div>
                 <div>

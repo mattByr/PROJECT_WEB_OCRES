@@ -35,13 +35,11 @@ code {
   align-items: center;
   margin: 25px 0px;
   padding: 0px  ;
-  border: 1px solid black;
 }
 
 .title {
   padding: 0px;
   width: 100%;
-  border: 1px solid black;
 }
 
 .profileInfos {

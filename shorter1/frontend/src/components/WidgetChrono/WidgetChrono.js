@@ -24,7 +24,7 @@ export default class WidgetChrono extends React.Component {
         return (
             <div class='widget'>                
                 
-                <div class='title' >
+                <div class="text font-weight-bold text-success text-uppercase mb-1" >
                     CHRONO
                 </div>
                 <div>
