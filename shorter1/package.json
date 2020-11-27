@@ -6,6 +6,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "-": "0.0.1",
     "body-parser": "^1.18.2",
     "chart.js": "^2.9.4",
     "create-react-app": "^1.5.2",
@@ -14,7 +15,10 @@
     "mongoose": "^5.0.7",
     "password-hash": "^1.2.2",
     "react-chartjs-2": "^2.11.1",
+    "react-share": "^4.3.1",
     "react-stopwatch": "^2.0.4",
-    "react-timer-hook": "^2.0.3"
+    "react-timer-hook": "^2.0.3",
+    "save": "^2.4.0",
+    "social-media-icons-react": "^1.1.2"
   }
 }

@@ -5,10 +5,12 @@ import API from "../../utils/API";
 import WidgetChrono from "../WidgetChrono/WidgetChrono";
 import WidgetDistribution from "../WidgetDistribution/WidgetDistribution";
 import WidgetNumberUsers from "../WidgetNumberUsers/WidgetNumberUsers";
-import WidgetProduct from "../WidgetProduct/addProduct";
 import WidgetNumberProducts from "../WidgetNumberProducts/WidgetNumberProducts"
+//import fillDataBase from "../fillDataBase/fillDataBase"
 
 import "./css/sb-admin-2.css";
+import SocialMediaButtons from "../WidgetSocialMedia/WidgetSocialMedia";
+import WidgetLastUsers from "../WidgetLastUsers/WidgetLastUsers";
 
 
 export class Dashboard extends React.Component {
@@ -16,7 +18,7 @@ export class Dashboard extends React.Component {
     API.logout();
     window.location = "/";
   };
- 
+
   render() {
     return (
       <div class="container-fluid">
@@ -85,7 +87,7 @@ export class Dashboard extends React.Component {
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                        <WidgetChrono className="row_widget"></WidgetChrono>
+                        <SocialMediaButtons className="row_widget"></SocialMediaButtons>
                         </div>
                     </div>
                 </div>
@@ -97,7 +99,7 @@ export class Dashboard extends React.Component {
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                        <WidgetChrono className="row_widget"></WidgetChrono>
+                        <WidgetLastUsers className="row_widget"></WidgetLastUsers>
                         </div>
                     </div>
                 </div>
