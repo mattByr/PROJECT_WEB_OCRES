@@ -7,8 +7,8 @@ function PieChart() {
 
     useEffect(() => {
         setData({
-            labels: ['America', 'Poland', 'Russia',
-                     'France', 'Germany'],
+            labels: ['Legume-Fruits', 'Cereales et dérivés', 'Produit laitiers',
+                     'Viande-Poisson-oeuf', 'Produits sucrés'],
             datasets: [
               {
                 label: 'Average Population',
@@ -26,7 +26,7 @@ function PieChart() {
                 '#003350',
                 '#35014F'
                 ],
-                data: [600005, 500009, 800000, 800001, 500006]
+                data: [12, 15, 3, 9, 5]
               }
             ]
           });
@@ -34,27 +34,12 @@ function PieChart() {
 
     return (
         <div>
-            <Pie
-          data={data}
-          options={{
-            title:{
-              display:true,
-              text:'Average Population PIE Chart',
-              fontSize:20
-            },
-            legend:{
-              display:true,
-              position:'right'
-            }
-          }}
-        />
-
         <Doughnut
           data={data}
           options={{
             title:{
               display:true,
-              text:'Average Population Doughnut',
+              text:'',
               fontSize:20
             },
             legend:{

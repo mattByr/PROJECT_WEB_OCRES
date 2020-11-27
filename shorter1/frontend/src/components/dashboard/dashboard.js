@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 import API from "../../utils/API";
 import WidgetChrono from "../WidgetChrono/WidgetChrono";
 import WidgetDistribution from "../WidgetDistribution/WidgetDistribution";
+import WidgetNumber from "../WidgetNumber/WidgetNumber";
 import WidgetProduct from "../WidgetProduct/addProduct";
 
 import "./css/sb-admin-2.css";
@@ -17,7 +18,6 @@ export class Dashboard extends React.Component {
  
   render() {
     return (
-
       <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
@@ -55,7 +55,7 @@ export class Dashboard extends React.Component {
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                        <WidgetChrono className="row_widget"></WidgetChrono>
+                        <WidgetNumber name={"User"} className="row_widget"></WidgetNumber>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@ export class Dashboard extends React.Component {
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                        <WidgetChrono className="row_widget"></WidgetChrono>
+                        <WidgetNumber name={"Products"} className="row_widget"></WidgetNumber>
                         </div>
                     </div>
                 </div>
