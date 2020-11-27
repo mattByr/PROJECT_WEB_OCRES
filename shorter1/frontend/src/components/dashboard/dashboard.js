@@ -7,28 +7,100 @@ import WidgetDistribution from "../WidgetDistribution/WidgetDistribution";
 import WidgetNumber from "../WidgetNumber/WidgetNumber";
 import WidgetProduct from "../WidgetProduct/addProduct";
 
-import "./dashboard.css";
+import "./css/sb-admin-2.css";
+
 
 export class Dashboard extends React.Component {
   disconnect = () => {
     API.logout();
     window.location = "/";
   };
+ 
   render() {
     return (
-      
-      <div className="row">
-        <h1>Dashboard</h1>
-        <div className="row_widgets">
-        <WidgetProduct className="row_widget"></WidgetProduct>
-        <WidgetDistribution className="row_widget"></WidgetDistribution>
-        <WidgetChrono className="row_widget"></WidgetChrono>
-        <WidgetNumber name={"Users"} className="row_widget"></WidgetNumber>
-        <WidgetNumber name={"Products"} className="row_widget"></WidgetNumber>
-
-       
+      <div class="container-fluid">
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
         </div>
 
+        <div className="row">
+          
+          <div class="col-xl-3 col-lg col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                        <WidgetDistribution className="row_widget"></WidgetDistribution>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <div class="col-xl-3 col-lg col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                        <WidgetChrono className="row_widget"></WidgetChrono>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        
+          <div class="col-xl-3 col-lg col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                        <WidgetNumber name={"User"} className="row_widget"></WidgetNumber>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+          
+        <div className="row">
+          <div class="col-xl-3 col-lg col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                        <WidgetNumber name={"Products"} className="row_widget"></WidgetNumber>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3  col-lg col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                        <WidgetChrono className="row_widget"></WidgetChrono>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3  col-lg col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                        <WidgetChrono className="row_widget"></WidgetChrono>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+        </div>
 
         <Button onClick={this.disconnect} block bsSize="large" type="submit">
           Se déconnecter
