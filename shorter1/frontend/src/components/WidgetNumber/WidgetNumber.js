@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../../index.css"
-import "./PieDoughnut"
-import PieChart from './PieDoughnut';
+import BarChart from './BarChart';
+
 
   
-export default class WidgetDistribution extends React.Component {
+export default class WidgetNumber extends React.Component {
     constructor(props) {
         super(props);
 
@@ -17,16 +17,15 @@ export default class WidgetDistribution extends React.Component {
 
 
     render() {
-        const { products, numberProduct} = this.props;
-        const { backgroundColor } = this.state;
+        const { name} = this.props;
         return (
             <div class='widget'>                
                 
                 <div class='title' >
-                    PRODUCTS DISTRIBUTION
+                    {`Nombre: ${name}`}
                 </div>
                 <div>
-                    <PieChart></PieChart>
+                    <BarChart></BarChart>
                 </div>
                     
             </div>
