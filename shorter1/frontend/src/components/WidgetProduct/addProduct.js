@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../../index.css"
 
+
   
 export default class WidgetProduct extends React.Component {
     constructor(props) {
@@ -31,6 +32,7 @@ export default class WidgetProduct extends React.Component {
                             {`Number of products : ${numberProduct}`}
                 </div>
                 <div>
+                    
             </div>
                     <Button text={'refresh'} onClick={this.refresh.bind(this)} style={{ alignSelf: 'flex-end' }} />
                 </div>
