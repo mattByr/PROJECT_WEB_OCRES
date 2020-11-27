@@ -14,6 +14,7 @@
     "mongoose": "^5.0.7",
     "password-hash": "^1.2.2",
     "react-chartjs-2": "^2.11.1",
-    "react-stopwatch": "^2.0.4"
+    "react-stopwatch": "^2.0.4",
+    "react-timer-hook": "^2.0.3"
   }
 }

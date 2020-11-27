@@ -2,10 +2,11 @@ import React from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../../index.css"
 import BarChart from './BarChart';
+import LineGraph from './LineChart';
 
 
   
-export default class WidgetNumber extends React.Component {
+export default class WidgetNumberUsers extends React.Component {
     constructor(props) {
         super(props);
 
@@ -22,7 +23,7 @@ export default class WidgetNumber extends React.Component {
             <div class='widget'>                
                 
                 <div class='title' >
-                    {`Nombre: ${name}`}
+                    Users
                 </div>
                 <div>
                     <BarChart></BarChart>

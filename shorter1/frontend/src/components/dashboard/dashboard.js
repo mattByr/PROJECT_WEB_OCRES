@@ -4,8 +4,9 @@ import { Button } from "react-bootstrap";
 import API from "../../utils/API";
 import WidgetChrono from "../WidgetChrono/WidgetChrono";
 import WidgetDistribution from "../WidgetDistribution/WidgetDistribution";
-import WidgetNumber from "../WidgetNumber/WidgetNumber";
+import WidgetNumberUsers from "../WidgetNumberUsers/WidgetNumberUsers";
 import WidgetProduct from "../WidgetProduct/addProduct";
+import WidgetNumberProducts from "../WidgetNumberProducts/WidgetNumberProducts"
 
 import "./css/sb-admin-2.css";
 
@@ -55,7 +56,7 @@ export class Dashboard extends React.Component {
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                        <WidgetNumber name={"User"} className="row_widget"></WidgetNumber>
+                        <WidgetNumberUsers name={"User"} className="row_widget"></WidgetNumberUsers>
                         </div>
                     </div>
                 </div>
@@ -69,7 +70,7 @@ export class Dashboard extends React.Component {
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                        <WidgetNumber name={"Products"} className="row_widget"></WidgetNumber>
+                        <WidgetNumberProducts name={"Products"} className="row_widget"></WidgetNumberProducts>
                         </div>
                     </div>
                 </div>
@@ -105,6 +106,7 @@ export class Dashboard extends React.Component {
         <Button onClick={this.disconnect} block bsSize="large" type="submit">
           Se déconnecter
         </Button>
+
       </div>
     );
   }

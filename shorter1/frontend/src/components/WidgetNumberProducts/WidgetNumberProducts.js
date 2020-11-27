@@ -1,13 +1,12 @@
 import React from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../../index.css"
+import "../WidgetNumberUsers/LineChart"
+import LineGraph from '../WidgetNumberUsers/LineChart';
 
-import "./Stopwatch"
-import Stopwatch from './Stopwatch';
-import Timer from './Timer';
 
   
-export default class WidgetChrono extends React.Component {
+export default class WidgetNumberProducts extends React.Component {
     constructor(props) {
         super(props);
 
@@ -19,19 +18,18 @@ export default class WidgetChrono extends React.Component {
 
 
     render() {
-        const { products, numberProduct} = this.props;
-        const { backgroundColor } = this.state;
+        const { name} = this.props;
         return (
             <div class='widget'>                
                 
                 <div class='title' >
-                    CHRONO
+                    Products
                 </div>
                 <div>
-                <Timer></Timer>
+                    <LineGraph></LineGraph>
                 </div>
                     
             </div>
-        )     
+        )              
     }
 }
