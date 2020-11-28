@@ -8,8 +8,8 @@ function BarChart() {
     useEffect(() => {
         setData(
           {
-            labels: ['January', 'February', 'March',
-                     'April', 'May'],
+            labels: ['Jan', 'Feb', 'Marc',
+                     'Apr', 'May'],
             datasets: [
               {
                 label: 'Users',

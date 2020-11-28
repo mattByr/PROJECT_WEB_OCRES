@@ -49,9 +49,11 @@ export class Login extends React.Component {
             type="password"
           />
         </FormGroup>
-        <Button onClick={this.send} block bsSize="large" type="submit">
+        <div class=" btn btn-success  ">
+          <Button onClick={this.send} block bsSize="large" type="submit">
           Connexion
         </Button>
+        </div>
       </div>
     );
   }
