@@ -28,7 +28,7 @@ export class Signup extends React.Component {
   render() {
     const { email, password, cpassword } = this.state;
     return (
-      <div className="Login">
+      <div class='widget'>
         <div class="text font-weight-bold text-success text-uppercase mb-1" >
                     Sign up
                 </div>

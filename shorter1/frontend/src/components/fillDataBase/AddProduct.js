@@ -60,8 +60,8 @@ export default class AddProduct extends React.Component {
       const { idProduct, name, category, distance } = this.state;
       return (
         
-        <div className="Login">
-          <div class="text font-weight-bold text-success text-uppercase mb-1" >
+        <div class='widget'>
+          <div class="text-center font-weight-bold text-success text-uppercase mb-1" >
                   Add a product
               </div>
         <FormGroup controlId="idProduct" bsSize="large">
