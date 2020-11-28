@@ -22,9 +22,10 @@ export default class WidgetNumberProducts extends React.Component {
         return (
             <div class='widget'>                
                 
-                <div class='title' >
+                <div class="text font-weight-bold text-primary text-uppercase mb-1" >
                     Products
                 </div>
+                
                 <div>
                     <LineGraph></LineGraph>
                 </div>
