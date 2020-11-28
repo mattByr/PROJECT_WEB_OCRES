@@ -1,4 +1,6 @@
 const User = require("../../schema/schemaUser.js");
+const Product = require("../../schema/schemaProduct.js");
+
 const passwordHash = require("password-hash");
 
 async function signup(req, res) {
@@ -67,46 +69,6 @@ async function login(req, res) {
     return res.status(500).json({
       error
     });
-  }
-}
-
-async function addProduct(req, res) {
-  const { idProduct, name, category, distance } = req.body;
-  if (!idProduct || !name || !category || !distance) {
-    //Le cas où les infos ne serait pas soumit ou nul
-    return res.status(400).json({
-      text: "Requête invalide"
-    });
-  }
-    // Création d'un objet user, dans lequel on hash le mot de passe
-    const product = {
-      idProduct,
-      name,
-      category, 
-      distance
-    };
-  try {
-    const findProduct = await User.findOne({
-      idProduct
-    });
-    if (findProduct) {
-      return res.status(400).json({
-        text: "Le produit existe déjà"
-      });
-    }
-  } catch (error) {
-    return res.status(500).json({ error });
-  }
-  try {
-    // Sauvegarde de l'utilisateur en base
-    const productData = new Product(user);
-    const userObject = await userData.save();
-    return res.status(200).json({
-      text: "Succès",
-      token: userObject.getToken()
-    });
-  } catch (error) {
-    return res.status(500).json({ error });
   }
 }
 

@@ -19,6 +19,11 @@ export class Dashboard extends React.Component {
     window.location = "/";
   };
 
+  addProduct = () => {
+    
+    window.location = "/fillDataBase";
+  };
+
   render() {
     return (
       <body id="page-top">
@@ -28,7 +33,7 @@ export class Dashboard extends React.Component {
               <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
               
                 <div class="btn btn-primary shadow h-70 py-2">
-                  <Button onClick={this.disconnect} block bsSize="small" >
+                  <Button onClick={this.addProduct} block bsSize="small" >
                     Ajouter des Données
                   </Button>
                 </div>
