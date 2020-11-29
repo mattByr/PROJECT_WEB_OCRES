@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../../index.css"
-import BarChart from './BarChart';
 import LineGraph from './LineChart';
 
 
@@ -26,7 +25,7 @@ export default class WidgetNumberUsers extends React.Component {
                     Users
                 </div>
                 <div>
-                    <BarChart></BarChart>
+                    <LineGraph></LineGraph>
                 </div>
                     
             </div>
