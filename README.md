@@ -1,3 +1,18 @@
+Bienvenue sur le dashboard de Shorter, voici les instructions pour lancer le projet correctement :
+- npm install puis npm start dans le dossier shorter1 afin de connecter la bdd.
+- yarn install puis yarn start dans le dossier frontend afin de lancer le front, une page s'ouvrira.
+
+Pour accéder au storybook:
+- yarn storybook dans le dossier frontend
+
+En vous souhaitant un tès bonne correction,
+
+L'équipe Shorter
+Inès Belloir et Matthieu Boyer
+
+
+
+
 # Projet de fin de semestre
 
 A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:
