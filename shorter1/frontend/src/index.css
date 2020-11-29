@@ -28,6 +28,32 @@ code {
   justify-content: flex-end;
 }
 
+h1{
+  
+}
+.face{
+
+  margin-right:30px;
+
+}
+
+.MdTimer{
+  align-items: center;
+  size: 100px;
+}
+
+ul.img{
+  margin-right:30px;
+}
+ul {
+  list-style:none;
+  margin-left:20px;
+  padding-top:10px;
+  }
+  li {
+  margin-bottom:15px;/* à adapter */
+  }
+
 .profile {
   display: flex;
   flex-direction: column;

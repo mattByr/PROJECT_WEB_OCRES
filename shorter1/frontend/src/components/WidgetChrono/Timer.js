@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTimer } from 'react-timer-hook';
- 
+import {MdTimer} from  'react-icons/md';
 function MyTimer({ expiryTimestamp }) {
   const {
     seconds,
@@ -20,7 +20,10 @@ function MyTimer({ expiryTimestamp }) {
       <div style={{fontSize: '30px'}}>
         Mise à jour dans  <br></br>
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
+        <br></br>
+        <MdTimer></MdTimer>
       </div>
+      
     </div>
   );
 }
