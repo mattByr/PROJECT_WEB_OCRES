@@ -2,8 +2,6 @@ import React from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../../index.css"
 
-import "./Stopwatch"
-import Stopwatch from './Stopwatch';
 import Timer from './Timer';
 
   

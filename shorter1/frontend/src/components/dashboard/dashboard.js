@@ -95,7 +95,7 @@ render() {
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                           <div class="col mr-2"> 
-                            <WidgetNumberUsers name={"User"} className="row_widget"></WidgetNumberUsers>
+                            <WidgetNumberProducts className="row_widget"></WidgetNumberProducts>
                           </div>
                         </div>
                     </div>
@@ -110,7 +110,7 @@ render() {
                     <div class="card-body">
                       <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                          <WidgetNumberProducts name={"Products"} className="row_widget"></WidgetNumberProducts>
+                          <WidgetNumberUsers className="row_widget"></WidgetNumberUsers>
                         </div>
                       </div>
                     </div>

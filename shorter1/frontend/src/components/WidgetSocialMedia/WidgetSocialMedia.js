@@ -13,6 +13,8 @@ import {
   RedditIcon
 } from 'react-share'
 
+ 
+
 const ShareButtons = ({title, url, twitterHandle, tags}) => {
 
     return(
@@ -36,6 +38,8 @@ const ShareButtons = ({title, url, twitterHandle, tags}) => {
           <WhatsappShareButton url={url} title={title}>
                <WhatsappIcon  size={40} round={true}/>
            </WhatsappShareButton>
+
+           
         </div>
       )
 

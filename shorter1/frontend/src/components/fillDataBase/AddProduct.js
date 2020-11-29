@@ -83,11 +83,14 @@ export default class AddProduct extends React.Component {
         </FormGroup>
         <FormGroup controlId="category" bsSize="large">
           <ControlLabel>category</ControlLabel>
-          <FormControl
-            value={category}
-            onChange={this.handleChange}
-            type="category"
-          />
+          <FormControl componentClass="select" placeholder="select">
+            <option value="LegumeFruit">Légume ou Fruit</option>
+            <option value="CerealesDerives">Céréales et dérivés</option>
+            <option value="ProduitsLaitiers">Produits laitiers</option>
+            <option value="ViandePoissonOeuf">Viande, Poisson ou Oeuf</option>
+            <option value="ProduitsSucres">Produits sucrés</option>
+          </FormControl>
+          
         </FormGroup>
         <FormGroup controlId="distance" bsSize="large">
           <ControlLabel>distance</ControlLabel>
