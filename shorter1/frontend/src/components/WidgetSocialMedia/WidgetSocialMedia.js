@@ -13,31 +13,44 @@ import {
   RedditIcon
 } from 'react-share'
 
- 
 
-const ShareButtons = ({title, url, twitterHandle, tags}) => {
 
-    return(
-        <div>
-          <FacebookShareButton url={url} >
-                <FacebookIcon  size={40} round={true}/>
-         </FacebookShareButton>
+const ShareButtons = ({ title, url, twitterHandle, tags }) => {
 
-          <TwitterShareButton url={url} title={title} via={twitterHandle} hashtags={tags}>
-                <TwitterIcon  size={40} round={true} />
-          </TwitterShareButton>
+  return (
+    
+    <div>
+     
+        <FacebookShareButton url={url} >
+        <div class = "espace">
+       <FacebookIcon size={40} round={true} />
+       
+       <div class="text font-weight-bold text-info text-uppercase mb-1" >
+          10K
+          </div>
+          </div>
+          </FacebookShareButton>
 
-          <LinkedinShareButton url={url} >
-            <LinkedinIcon  size={40} round={true}/>
-          </LinkedinShareButton>
+        <TwitterShareButton url={url} ii={title} via={twitterHandle} hashtags={tags}>
+        <div class = "espace">
+          <TwitterIcon size={40} round={true} />
+          
+          <div class="text font-weight-bold text-info text-uppercase mb-1" >
+            10K
+                </div>
+                </div>
+        </TwitterShareButton>
 
-          <RedditShareButton url={url} title={title} >
-            <RedditIcon  size={40} round={true} />
-          </RedditShareButton>
+        <LinkedinShareButton url={url} >
+        <div class = "espace">
+          <LinkedinIcon size={40} round={true} />
+          <div class="text font-weight-bold text-info text-uppercase mb-1" >
+            10K
+                </div>
+                </div>
+        </LinkedinShareButton>
 
-          <WhatsappShareButton url={url} title={title}>
-               <WhatsappIcon  size={40} round={true}/>
-           </WhatsappShareButton>
+          
 
            
         </div>

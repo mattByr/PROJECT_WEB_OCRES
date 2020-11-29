@@ -18,7 +18,7 @@ function MyTimer({ expiryTimestamp }) {
   return (
     <div style={{textAlign: 'center'}}>
       <div style={{fontSize: '30px'}}>
-        Mise à jour dans  <br></br>
+        Update in   <br></br>
         <span>{days}</span>:<span>{hours}</span>:<span>{minutes}</span>:<span>{seconds}</span>
       </div>
     </div>

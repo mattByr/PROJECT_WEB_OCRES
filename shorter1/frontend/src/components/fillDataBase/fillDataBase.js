@@ -34,7 +34,7 @@ export class fillDataBase extends React.Component {
                   <li class="nav-item">
                     <div class=" btn btn-secondary">
                       <Button onClick={this.disconnect} block bsSize="small" >
-                        Se déconnecter
+                        Disconnect
                       </Button>
                     </div>          
                   </li>

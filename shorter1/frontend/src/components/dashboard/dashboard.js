@@ -45,13 +45,13 @@ render() {
                     
                     <div class="btn btn-primary">
                       <Button onClick={this.addProduct} block bsSize="small" >
-                        Ajouter des Données
+                        Add
                       </Button>
                     </div>
               
                     <div class=" btn btn-secondary">
                       <Button onClick={this.disconnect} block bsSize="small" >
-                        Se déconnecter
+                        Disconnect
                       </Button>
                     </div>          
                   </li>
