@@ -29,10 +29,10 @@ export default class WidgetLastUsers extends React.Component {
                         <div className = "face"><MdFace></MdFace>    Inès Belloir : il y a 20 minutes</div>   
                     </li>
                     <li>
-                        <div className = "face"><MdFace></MdFace>    Matthieu Boyer : il y a 20 minutes</div>   
+                        <div className = "face"><MdFace></MdFace>    Matthieu Boyer : il y a 30 minutes</div>   
                     </li>
                     <li>
-                        <div className = "face"><MdFace></MdFace>    Jean Dupont : il y a 20 minutes</div>   
+                        <div className = "face"><MdFace></MdFace>    Jean Dupont : il y a 40 minutes</div>   
                     </li>
                 </ul>
                 

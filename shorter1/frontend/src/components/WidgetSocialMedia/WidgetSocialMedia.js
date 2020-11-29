@@ -19,9 +19,14 @@ const ShareButtons = ({ title, url, twitterHandle, tags }) => {
 
   return (
     
-    <div>
-     
-        <FacebookShareButton url={url} >
+    
+    <div class='widget'>                
+                
+    <div class="text font-weight-bold text-success text-uppercase mb-1" >
+        Social Networks
+    </div>
+    <div class = "text-center">
+    <FacebookShareButton url={url} >
         <div class = "espace">
        <FacebookIcon size={40} round={true} />
        
@@ -49,11 +54,14 @@ const ShareButtons = ({ title, url, twitterHandle, tags }) => {
                 </div>
                 </div>
         </LinkedinShareButton>
-
-          
-
-           
+        
+        <div class="text font-weight-bold text-info text-uppercase mb-1" >
+        Augmentation de 10%
         </div>
+    
+    </div>
+        
+</div>
       )
 
 }

@@ -7,8 +7,8 @@ function PieChart() {
 
     useEffect(() => {
         setData({
-            labels: ['Legume-Fruits', 'Cereales et dérivés', 'Produit laitiers',
-                     'Viande-Poisson-oeuf', 'Produits sucrés'],
+            labels: ['Fruits-Vegetables', 'Cereals', 'Dairy Product',
+                     'Meat-Fish-Egg', 'Sugar Product'],
             datasets: [
               {
                 label: 'Average Population',
