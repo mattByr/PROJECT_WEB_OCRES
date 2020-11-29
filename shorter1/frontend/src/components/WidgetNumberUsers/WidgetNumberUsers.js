@@ -21,7 +21,7 @@ export default class WidgetNumberUsers extends React.Component {
         return (
             <div class='widget'>                
                 
-                <div class="text font-weight-bold text-info text-uppercase mb-1" >
+                <div class="text font-weight-bold text-primary text-uppercase mb-1" >
                     Users
                 </div>
                 <div>
