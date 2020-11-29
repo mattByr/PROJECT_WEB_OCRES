@@ -6,22 +6,23 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
-    "web-vitals": "^0.2.4",
     "axios": "^0.18.0",
+    "react": "^17.0.1",
     "react-bootstrap": "^0.32.1",
+    "react-dom": "^17.0.1",
     "react-facebook-login": "^4.0.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "serve": "^9.1.0"
+    "react-scripts": "4.0.0",
+    "serve": "^9.1.0",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9001"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +41,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    
+    
+    "@storybook/addons": "^5.2.6",
+    
+    "@storybook/addon-actions": "^6.1.8",
+    "@storybook/addon-essentials": "^6.1.8",
+    "@storybook/addon-links": "^6.1.8",
+    "@storybook/node-logger": "^6.1.8",
+    "@storybook/preset-create-react-app": "^3.1.5",
+    "@storybook/react": "^6.1.8"
+    
   }
+  
 }
