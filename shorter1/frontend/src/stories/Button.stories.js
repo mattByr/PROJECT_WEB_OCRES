@@ -19,7 +19,7 @@ export default {
 const Template = (args) => <Button {...args} />;
 
 
-
+  
 export const widget1 = () =><WidgetChrono />;
 export const widget2 = () =><WidgetDistribution />;
 export const widget3 = () =><WidgetLastUsers />;
