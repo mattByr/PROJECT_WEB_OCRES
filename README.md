@@ -10,7 +10,7 @@ En vous souhaitant un tès bonne correction,
 L'équipe Shorter
 Inès Belloir et Matthieu Boyer
 
-
+Lien trello : https://trello.com/b/yNVC3qKU/project-web
 
 
 # Projet de fin de semestre
