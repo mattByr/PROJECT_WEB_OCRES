@@ -11,7 +11,11 @@ import "../dashboard/css/sb-admin-2.css";
 
 
 export class fillDataBase extends React.Component {
- 
+  
+  disconnect = () => {
+    API.logout();
+    window.location = "/";
+  };
 
   render() {
     return (
