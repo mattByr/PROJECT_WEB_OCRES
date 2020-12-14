@@ -38,6 +38,70 @@ async function addProduct(req, res) {
     return res.status(500).json({ error });
   }
 }
+
+async function numberProduct(req, res) {
+
+  try {
+    // On compte le nombre de produit
+    //const numberP = await Product.find().count();
+    const listProducts = await Product.aggregate([{$project:{month: {$month : "$created_at"}}}])
+
+    return res.status(200).json({
+      listProducts,
+    });
+  } catch (error) {
+    return res.status(500).json({ error});
+  }
+}
+
+
+
+
+
+
+async function listCategory(req, res) {
+
+  try {
+    // On compte le nombre de produit
+    const listCategory = await Product.distinct("category");
+    return res.status(200).json({
+      listCategory,
+    });
+  } catch (error) {
+    return res.status(500).json({ error});
+  }
+}
+
+async function removeProduct(req, res) {
+
+  const { idProduct } = req.body;
+  try {
+    // On compte le nombre de produit
+    const productRemoved = await Product.remove({"idProduct" : idProduct})
+    return res.status(200).json({
+      productRemoved,
+    });
+  } catch (error) {
+    return res.status(500).json({ error});
+  }
+}
+
+async function numberPerCategory(req, res) {
+
+  try {
+    // On compte le nombre de produit
+    const numberPerCategory = await Product.aggregate([{ $group: { _id : "$category", "total": { $sum: 1 } } }]);
+    return res.status(200).json({
+      numberPerCategory,
+    });
+  } catch (error) {
+    return res.status(500).json({ error});
+  }
+}
 //On exporte nos deux fonctions
 
+exports.numberProduct = numberProduct;
 exports.addProduct = addProduct;
+exports.listCategory = listCategory;
+exports.numberPerCategory = numberPerCategory;
+exports.removeProduct = removeProduct;

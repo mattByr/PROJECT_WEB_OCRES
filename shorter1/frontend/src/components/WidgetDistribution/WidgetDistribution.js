@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../../index.css"
+import API from '../../utils/API';
 import "./PieDoughnut"
 import PieChart from './PieDoughnut';
 
@@ -9,16 +10,34 @@ export default class WidgetDistribution extends React.Component {
     constructor(props) {
         super(props);
 
+        this.getNumberPerCategory();
+
         this.state = {
             
         }
 
     }
 
+    getNumberPerCategory = async () => {
+      
+
+        try {
+          const { data: numberPerCategory } = await API.numberPerCategory({});
+          this.setState({ numberPerCategory });
+
+
+        } catch (error) {
+          
+          console.error(error);
+        }
+      
+      };
+
+      
 
     render() {
-        const { products, numberProduct} = this.props;
-        const { backgroundColor } = this.state;
+        const {numberPerCategory} = this.state;    
+        
         return (
             <div class='widget'>                
                 
@@ -26,10 +45,10 @@ export default class WidgetDistribution extends React.Component {
                     PRODUCTS DISTRIBUTION
                 </div>
                 <div>
-                    <PieChart></PieChart>
+                    <PieChart numberPerCategory={numberPerCategory}></PieChart>
                 </div>
                     
             </div>
-        )              
+        )             
     }
 }

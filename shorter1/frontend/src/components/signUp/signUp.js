@@ -6,14 +6,18 @@ export class Signup extends React.Component {
   state = {
     email: "",
     password: "",
-    cpassword: ""
+    cpassword: "",
+    lastname: "",
+    firstname: ""
   };
   send = async () => {
-    const { email, password, cpassword } = this.state;
+    const { email, password, cpassword, lastname, firstname } = this.state;
     if (!email || email.length === 0) return;
+    if (!lastname || lastname.length === 0) return;
+    if (!firstname || firstname.length === 0) return;
     if (!password || password.length === 0 || password !== cpassword) return;
     try {
-      const { data } = await API.signup({ email, password });
+      const { data } = await API.signup({ email, password, lastname, firstname  });
       localStorage.setItem("token", data.token);
       window.location = "/dashboard";
     } catch (error) {
@@ -26,7 +30,7 @@ export class Signup extends React.Component {
     });
   };
   render() {
-    const { email, password, cpassword } = this.state;
+    const { email, password, cpassword, lastname, firstname } = this.state;
     return (
       <div class='widget'>
         <div class="text font-weight-bold text-success text-uppercase mb-1" >
@@ -56,6 +60,22 @@ export class Signup extends React.Component {
             onChange={this.handleChange}
             type="password"
           />
+          <FormGroup controlId="lastname" bsSize="large">
+          <ControlLabel>Last Name</ControlLabel>
+          <FormControl 
+          value={lastname}
+          onChange={this.handleChange}
+          type="lastname"
+          />
+          </FormGroup>
+        <FormGroup controlId="firstname" bsSize="large">
+          <ControlLabel>First Name</ControlLabel>
+          <FormControl
+            value={firstname}
+            onChange={this.handleChange}
+            type="firstname"
+          />
+        </FormGroup>
         </FormGroup>
         <div class=" btn btn-success  ">
           <Button onClick={this.send} block bsSize="large" type="submit">

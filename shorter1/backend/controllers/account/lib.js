@@ -4,8 +4,8 @@ const Product = require("../../schema/schemaProduct.js");
 const passwordHash = require("password-hash");
 
 async function signup(req, res) {
-  const { password, email } = req.body;
-  if (!email || !password) {
+  const { firstname, lastname, password, email } = req.body;
+  if (!email || !password || !lastname || !firstname) {
     //Le cas où l'email ou bien le password ne serait pas soumit ou nul
     return res.status(400).json({
       text: "Requête invalide"
@@ -14,7 +14,9 @@ async function signup(req, res) {
   // Création d'un objet user, dans lequel on hash le mot de passe
   const user = {
     email,
-    password: passwordHash.generate(password)
+    password: passwordHash.generate(password),
+    lastname,
+    firstname
   };
   // On check en base si l'utilisateur existe déjà
   try {
@@ -72,7 +74,40 @@ async function login(req, res) {
   }
 }
 
+
+async function numberUser(req, res) {
+
+  try {
+    // On compte le nombre de produit
+    //const numberP = await Product.find().count();
+    const listUsers = await User.aggregate([{$project:{month: {$month : "$created_at"}}}])
+
+    return res.status(200).json({
+      listUsers,
+    });
+  } catch (error) {
+    return res.status(500).json({ error});
+  }
+}
+
+
+async function lastUser(req, res) {
+
+  try {
+    // On compte le nombre de produit
+    //const numberP = await Product.find().count();
+    const lastUsers = await User.find({}).sort({_id:-1}).limit(3)
+
+    return res.status(200).json({
+      lastUsers,
+    });
+  } catch (error) {
+    return res.status(500).json({ error});
+  }
+}
 //On exporte nos deux fonctions
 
 exports.login = login;
 exports.signup = signup;
+exports.numberUser = numberUser;
+exports.lastUser = lastUser;

@@ -48,6 +48,9 @@ require(__dirname + "/backend/controllers/userController")(router);
 app.use("/product", router);
 require(__dirname + "/backend/controllers/userController")(router);
 
+app.use("/time", router);
+require(__dirname + "/backend/controllers/userController")(router);
+
 //Définition et mise en place du port d'écoute
 const port = 8800;
 app.listen(port, () => console.log(`Listening on port ${port}`));

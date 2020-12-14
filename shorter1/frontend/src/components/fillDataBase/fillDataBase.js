@@ -5,9 +5,12 @@ import NotificationContainer from "react-notifications/lib/NotificationContainer
 import API from "../../utils/API";
 import { Signup } from "../signUp/signUp";
 import AddProduct from "./AddProduct";
+import AddTime from "./AddTime";
 //import Notification from "./Notification";
 
 import "../dashboard/css/sb-admin-2.css";
+import UpdateTime from "./UpdateTime";
+import RemoveProduct from "./RemoveProduct";
 
 
 export class fillDataBase extends React.Component {
@@ -15,6 +18,10 @@ export class fillDataBase extends React.Component {
   disconnect = () => {
     API.logout();
     window.location = "/";
+  };
+  dashboard = () => {
+  
+    window.location = "/dashboard";
   };
 
   render() {
@@ -39,6 +46,13 @@ export class fillDataBase extends React.Component {
                     <div class=" btn btn-secondary">
                       <Button onClick={this.disconnect} block bsSize="small" >
                         Disconnect
+                      </Button>
+                    </div>          
+                  </li>
+                  <li class="nav-item">
+                    <div class=" btn btn-secondary">
+                      <Button onClick={this.dashboard} block bsSize="small" >
+                        Dashboard
                       </Button>
                     </div>          
                   </li>
@@ -69,6 +83,48 @@ export class fillDataBase extends React.Component {
                               <div class="col mr-2">
                                 <div class="text-center">
                                   <Signup className = "row_widget"></Signup>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 mb-4">
+                  <div class="card border-left-primary shadow h-100 py-2">
+                      <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                <div class="text-center">
+                                  <AddTime className = "row_widget"></AddTime>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 mb-4">
+                  <div class="card border-left-primary shadow h-100 py-2">
+                      <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                <div class="text-center">
+                                  <UpdateTime className = "row_widget"></UpdateTime>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 mb-4">
+                  <div class="card border-left-primary shadow h-100 py-2">
+                      <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                <div class="text-center">
+                                  <RemoveProduct className = "row_widget"></RemoveProduct>
                                 </div>
                               </div>
                           </div>
