@@ -79,7 +79,7 @@ export class Signup extends React.Component {
         </FormGroup>
         <div class=" btn btn-success  ">
           <Button onClick={this.send} block bsSize="large" type="submit">
-          Inscription
+          Sign up
         </Button>
         </div>
       </div>

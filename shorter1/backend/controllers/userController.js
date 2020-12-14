@@ -12,6 +12,7 @@ module.exports = function (app) {
     app.post('/numberProduct',product.numberProduct);
     app.post('/listCategory',product.listCategory);
     app.post('/removeProduct',product.removeProduct);
+    app.post('/avgDistance',product.avgDistance);
     app.post('/numberPerCategory',product.numberPerCategory);
     app.post('/addTime',time.addTime);
     app.post('/getTime',time.getTime);

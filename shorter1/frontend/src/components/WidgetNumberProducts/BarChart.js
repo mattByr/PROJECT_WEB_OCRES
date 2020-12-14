@@ -21,62 +21,62 @@ function BarChart(props) {
 
         var nbJanvier = countOccurrences(tabList, 1)
         if( nbJanvier > 0) { 
-          tabLabels.push("Janvier")
+          tabLabels.push("January")
           tabNumbers.push(nbJanvier) }
 
         var nbFevrier = countOccurrences(tabList, 2)
         if( nbFevrier > 0){
-          tabLabels.push("Fevrier")
+          tabLabels.push("February")
           tabNumbers.push(nbFevrier) }
         
         var nbMars = countOccurrences(tabList, 3)
         if( nbMars > 0){
-          tabLabels.push("Mars")
+          tabLabels.push("March")
           tabNumbers.push(nbMars) }
 
         var nbAvril = countOccurrences(tabList, 4)
         if( nbAvril > 0){
-          tabLabels.push("Avril")
+          tabLabels.push("April")
           tabNumbers.push(nbAvril) }
 
         var nbMai = countOccurrences(tabList, 5)
         if( nbAvril > 0){
-          tabLabels.push("Avril")
+          tabLabels.push("May")
           tabNumbers.push(nbAvril) }
 
         var nbJuin = countOccurrences(tabList, 6)
         if( nbJuin > 0){
-          tabLabels.push("Juin")
+          tabLabels.push("June")
           tabNumbers.push(nbJuin) }
 
         var nbJuillet = countOccurrences(tabList, 7)
         if( nbJuillet > 0){
-          tabLabels.push("Juillet")
+          tabLabels.push("July")
           tabNumbers.push(nbJuillet) }
 
         var nbAout = countOccurrences(tabList, 8)
         if( nbAout > 0){
-          tabLabels.push("Aout")
+          tabLabels.push("August")
           tabNumbers.push(nbAout) }
 
         var nbSeptembre = countOccurrences(tabList, 9)
         if( nbSeptembre > 0){
-          tabLabels.push("Septembre")
+          tabLabels.push("September")
           tabNumbers.push(nbSeptembre) }
 
         var nbOctobre = countOccurrences(tabList, 10)
         if( nbOctobre > 0){
-          tabLabels.push("Octobre")
+          tabLabels.push("October")
           tabNumbers.push(nbOctobre) }
 
         var nbNovembre = countOccurrences(tabList, 11)
         if( nbNovembre > 0){
-          tabLabels.push("Novembre")
+          tabLabels.push("November")
           tabNumbers.push(nbNovembre) }
 
         var nbDecembre = countOccurrences(tabList, 12)
         if( nbDecembre > 0){
-          tabLabels.push("Decembre")
+          tabLabels.push("December")
           tabNumbers.push(nbDecembre) }
 
 

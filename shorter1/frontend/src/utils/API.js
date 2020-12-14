@@ -41,6 +41,10 @@ export default {
     return axios.post(`${burl}/product/removeProduct`, send, { headers: headers });
   },
 
+  avgDistance: function(send) {
+    return axios.post(`${burl}/product/avgDistance`, send, { headers: headers });
+  },
+
   numberPerCategory: function(send) {
     return axios.post(`${burl}/product/numberPerCategory`, send, { headers: headers });
   },

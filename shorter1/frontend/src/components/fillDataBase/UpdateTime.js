@@ -79,7 +79,7 @@ export default class UpdateTime extends React.Component {
         
         <div class=" btn btn-success  ">
           <Button onClick={this.send} block bsSize="large" type="submit">
-          Add a new time
+          Update a maj
         </Button>
         </div>
       </div>

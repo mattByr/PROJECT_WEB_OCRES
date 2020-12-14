@@ -54,6 +54,21 @@ async function numberProduct(req, res) {
   }
 }
 
+async function avgDistance(req, res) {
+
+  try {
+    // On compte le nombre de produit
+    //const numberP = await Product.find().count();
+    const avgProducts = await Product.aggregate([{$group: {_id:"$category", productAvg: {$avg:"$distance"} } }])
+
+    return res.status(200).json({
+      avgProducts,
+    });
+  } catch (error) {
+    return res.status(500).json({ error});
+  }
+}
+
 
 
 
@@ -105,3 +120,4 @@ exports.addProduct = addProduct;
 exports.listCategory = listCategory;
 exports.numberPerCategory = numberPerCategory;
 exports.removeProduct = removeProduct;
+exports.avgDistance = avgDistance;

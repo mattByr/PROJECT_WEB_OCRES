@@ -42,17 +42,17 @@ export class fillDataBase extends React.Component {
                   </li>
                 </ul>
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <div class=" btn btn-secondary">
-                      <Button onClick={this.disconnect} block bsSize="small" >
-                        Disconnect
+                <li class="nav-item">
+                    <div class=" btn btn-primary">
+                      <Button onClick={this.dashboard} block bsSize="small" >
+                        Dashboard
                       </Button>
                     </div>          
                   </li>
                   <li class="nav-item">
                     <div class=" btn btn-secondary">
-                      <Button onClick={this.dashboard} block bsSize="small" >
-                        Dashboard
+                      <Button onClick={this.disconnect} block bsSize="small" >
+                        Disconnect
                       </Button>
                     </div>          
                   </li>

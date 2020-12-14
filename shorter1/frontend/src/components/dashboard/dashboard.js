@@ -9,8 +9,9 @@ import WidgetNumberProducts from "../WidgetNumberProducts/WidgetNumberProducts"
 //import fillDataBase from "../fillDataBase/fillDataBase"
 
 
-import SocialMediaButtons from "../WidgetSocialMedia/WidgetSocialMedia";
+import SocialMediaButtons from "../WidgetDistance/WidgetDistance";
 import WidgetLastUsers from "../WidgetLastUsers/WidgetLastUsers";
+import WidgetDistance from "../WidgetDistance/WidgetDistance";
 
 
 export class Dashboard extends React.Component {
@@ -125,7 +126,7 @@ render() {
                     <div class="card-body">
                       <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                          <SocialMediaButtons className="row_widget"></SocialMediaButtons>
+                          <WidgetDistance className="row_widget"></WidgetDistance>
                         </div>
                       </div>
                     </div>

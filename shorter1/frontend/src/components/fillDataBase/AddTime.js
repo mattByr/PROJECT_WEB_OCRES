@@ -79,7 +79,7 @@ export default class AddTime extends React.Component {
         
         <div class=" btn btn-success  ">
           <Button onClick={this.send} block bsSize="large" type="submit">
-          Add a new time
+          Add a new maj
         </Button>
         </div>
       </div>
