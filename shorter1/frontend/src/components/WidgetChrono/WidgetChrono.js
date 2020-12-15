@@ -3,8 +3,8 @@ import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "../../index.css"
 import {MdTimer} from  'react-icons/md';
 import API from '../../utils/API';
-import Timer from './Timer';
-
+import Countdown from './Countdown';
+import moment from 'moment';
   
 export default class WidgetChrono extends React.Component {
     constructor(props) {
@@ -34,6 +34,19 @@ export default class WidgetChrono extends React.Component {
     render() {
         const { products, numberProduct} = this.props;
         const { timeMaj } = this.state;
+
+        var tampon
+        if(timeMaj != null)
+        {
+        const timeTab = timeMaj
+        timeTab.time.map(element => {
+            tampon = timeTab.time[0].timeMaj
+            
+        });
+        }
+        var test = new Date(tampon); 
+        var format = "YYYY-MM-DD, hh:mm:ss"
+
         return (
             <div class='widget'>                
                 
@@ -41,7 +54,8 @@ export default class WidgetChrono extends React.Component {
                     CHRONO
                 </div>
                 <div>
-                <Timer timeMaj ={timeMaj}></Timer>
+                <Countdown timeTillDate={test} timeFormat="YYYY-MM-DD, hh:mm:ss" />
+            
                 </div>
                     
             </div>
